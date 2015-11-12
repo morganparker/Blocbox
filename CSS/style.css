@@ -299,7 +299,70 @@ html, body{
    margin-top: 20px;
  }
  .offset{
-   clear:left;
    position:relative;
    top:20px;
+ }
+ /*CALL TO ACTIOM */
+ section .action{
+   text-align: center;
+   display:block;
+   position: relative;
+   margin-bottom:150px;
+   padding-bottom:50px;
+   border:solid 2px #357F75;
+ }
+ .action p{
+   padding-bottom:20px;
+ }
+  /* FOOTER */
+ footer {
+   background-color: #357F75;
+   background-image: linear-gradient(to top,
+      206deg, rgb(53,127,117) 100%, rgb(85,204,187) 0%, rgb(69,166,152) 44%);
+   color: #FFFFFF;
+   height: 150px;
+   position: relative;
+   overflow: hidden;
+   z-index: 0;
+ }
+ footer p, footer nav ul {
+   font-size:14px;
+   font-weight:100;
+   text-align: center;
+   margin: 10px auto 0;
+ }
+ footer nav ul li {
+   list-style-type: none;
+   display: inline;
+ }
+ footer nav ul li a {
+   color:#FFFFFF;
+   text-decoration: none;
+ }
+ footer .right-footer-block {
+   background-color: transparent;
+ }
+ footer .logo{
+   padding: 2.35em 0;
+   margin: 0 auto;
+   display: block;
+ }
+
+ @media (min-width: 992px){
+   footer{
+     background-color: #357F75;
+     background-image: linear-gradient(to left,
+      206deg, rgb(53,127,117) 100%, rgb(85,204,187) 0%, rgb(69,166,152) 44%);
+     height: 100px;
+   }
+   footer p, footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+   }
+   footer .right-footer-block {
+     background-color: #357F75;
+   }
+   footer .logo{
+     padding: 2em 0 2em 1.5em;
+   }
  }

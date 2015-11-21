@@ -41,10 +41,22 @@ html, body{
    min-height: 1px;
    margin:0 2% 20px;
  }
+ nav .one-half{
+   width:46%;
+ }
  @media (min-width: 768px) {
    .container {
      width: 750px;
    }
+   footer {
+      height: 150px;
+   }
+   header .hero img{
+      width: 686px;
+   }
+    header nav ul > li {
+   margin:0 15px;
+ }
  }
  @media (min-width: 992px) {
    .container {
@@ -101,7 +113,7 @@ html, body{
  header nav ul > li {
    list-style-type: none;
    display: inline-block;
-   margin:0 15px;
+   margin:0 5px;
  }
  header nav ul > li.btn-outline {
    padding:10px 15px;
@@ -137,6 +149,7 @@ html, body{
  header .hero img {
    display: block;
    margin:3em auto 0;
+   width:96%;
  }
   /* BUTTONS */
  .btn {
@@ -161,7 +174,7 @@ html, body{
  }
  .benefits ul li {
    list-style-type: none;
-   display: inline-block;
+   display: block;
  }
  .benefits i {
    color:#55CCBB;
@@ -320,10 +333,10 @@ html, body{
    background-image: linear-gradient(to top,
       206deg, rgb(53,127,117) 100%, rgb(85,204,187) 0%, rgb(69,166,152) 44%);
    color: #FFFFFF;
-   height: 150px;
    position: relative;
    overflow: hidden;
    z-index: 0;
+   height: 230px;
  }
  footer p, footer nav ul {
    font-size:14px;
@@ -370,6 +383,49 @@ html, body{
  .dashboard {
    background:#F7F7F7;
  }
+ .left-nav{
+   height: 100%;
+   width:280px;
+   position: absolute;
+   background:#357F75;
+   color:#FFF;
+   background-image: linear-gradient( 206deg, rgb(53,127,117) 100%, rgb(85,204,187) 0%, rgb(69,166,152) 44%);
+   float:left;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
+ }
+ .left-nav.open {
+   display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:#357F75;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
+ }
+ @media (min-width:992px) {
  .left-nav {
    height: 100vh;
    width:14.66666667%;
@@ -379,6 +435,21 @@ html, body{
    float:left;
    position: fixed;
    display:block;
+    transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+  .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
  }
  .left-nav .site-logo {
    padding:20px 0;

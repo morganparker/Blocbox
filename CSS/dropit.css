@@ -18,7 +18,7 @@
 .dropit .dropit-trigger { position: relative; }
 .dropit .dropit-submenu {
     position: absolute;
-    top: 100%;
+    /* top: 100%; */
     right: 0; /* dropdown left or right */
     z-index: 1000;
     display: none;
@@ -58,4 +58,22 @@
   font-family: "Muli", Helvetica, Arial, sans-serif;
   font-weight:100;
  }
- /*Dropit for Settings Menu*/
+ /*Setting menu dropit */
+ .settings .dropit-open .dropit-submenu {
+  top: auto;
+  left: auto;
+  bottom: 0px;
+  right: 10px;
+ }
+.settings .dropit .dropit-open .dropit-submenu:after {
+  top: 121px;
+  right: 5px;
+ transform: rotate(180deg);
+   -ms-transform:rotate(180deg); /* IE 9 */
+   -moz-transform:rotate(180deg); /* Firefox */
+   -webkit-transform:rotate(180deg); /* Safari and Chrome */
+   -o-transform:rotate(180deg);
+ }
+ .settings .dropit .dropit-submenu {
+    min-width: 160px;
+ }
